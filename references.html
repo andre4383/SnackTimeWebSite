@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Referências - SnackTime</title>
+    <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-content">
+            <a href="index.html" class="brand">
+                <img src="images/logo.jpg" alt="SnackTime Logo" style="height: 40px; margin-right: 10px; border-radius: 50%;">
+                SnackTime
+            </a>
+            <div class="nav-container">
+                <nav>
+                    <a href="references.html" class="nav-link active">References</a>
+                </nav>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h1>Documentação Técnica</h1>
+            <p>Detalhes sobre o funcionamento do alimentador SnackTime.</p>
+            
+            <div class="card-grid">
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3>Controle do Servo Motor</h3>
+                    <p>O coração do SnackTime é um servo motor controlado por Arduino, responsável por liberar a ração.</p>
+                    <br>
+                    <h4>Código Fonte</h4>
+                    <pre style="background: var(--code-bg); padding: 15px; border-radius: 4px; overflow-x: auto; margin-top: 10px;">
+<code>#include &lt;Servo.h&gt;
+Servo servo;  // cria objeto do servo
+int angulo;   // variável para armazenar o ângulo atual
+
+void setup() {
+  servo.attach(9);  // conecta o servo ao pino digital 9
+}
+
+void loop() {
+  // Vai de 0 até 180 graus
+  for (angulo = 0; angulo <= 180; angulo++) {
+    servo.write(angulo);
+    delay(20); // controla a velocidade (20 ms = suave)
+  }
+
+  // Volta de 180 até 0 graus
+  for (angulo = 180; angulo >= 0; angulo--) {
+    servo.write(angulo);
+    delay(20);
+  }
+}</code></pre>
+                </div>
+                
+                <div class="card">
+                    <h3>Biblioteca Servo.h</h3>
+                    <p>Utilizamos a biblioteca padrão <code>Servo.h</code> para facilitar o controle do posicionamento angular do motor.</p>
+                </div>
+                <div class="card">
+                    <h3>Funcionamento</h3>
+                    <p>O loop principal move o servo de 0 a 180 graus e vice-versa, simulando o mecanismo de abertura e fechamento do dispensador.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2025 SnackTime Project.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
