@@ -47,9 +47,3 @@ ProjetoSnackTime/
 └── README.md           # Este arquivo
 ```
 
-## 📝 Licença
-
-Este projeto foi desenvolvido para fins acadêmicos.
-
----
-Feito com 🧡 por André Montenegro.
