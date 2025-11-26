@@ -4,8 +4,6 @@
 
 O **SnackTime** é um projeto de alimentador automatizado desenvolvido com Arduino, focado em trazer tranquilidade para os donos e saúde para os pets. Este repositório contém o site de documentação e apresentação do produto.
 
-![Preview do Projeto](images/preview.png)
-
 ## ✨ Funcionalidades
 
 - **Design Amigável**: Interface "Playful" pensada para o universo pet.
