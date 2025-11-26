@@ -1,5 +1,5 @@
-# SnackTimeWebSite# 
-🐶 SnackTime
+# SnackTimeWebSite
+# 🐶 SnackTime
 > **Seu pet alimentado na hora certa, sempre.**
 O **SnackTime** é um projeto de alimentador automatizado desenvolvido com Arduino, focado em trazer tranquilidade para os donos e saúde para os pets. Este repositório contém o site de documentação e apresentação do produto.
 ## ✨ Funcionalidades
