@@ -34,7 +34,4 @@ ProjetoSnackTime/
 ├── index.html          # Página Inicial
 ├── references.html     # Página de Referências Técnicas
 └── README.md           # Este arquivo
-```
-## 📝 Licença
-Este projeto foi desenvolvido para fins acadêmicos.
 ---
