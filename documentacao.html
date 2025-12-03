@@ -51,29 +51,30 @@
       </div>
     </header>
 
-    <main class="container">
-      <section class="section">
-        <h1>Documentação Técnica</h1>
-        <p>Detalhes sobre o funcionamento do alimentador SnackTime.</p>
+    <main>
+      <div class="container">
+        <section class="section mb-0">
+          <h1>Documentação Técnica</h1>
+          <p>Detalhes sobre o funcionamento do alimentador SnackTime.</p>
 
-        <div class="card-grid">
-          <div class="card" style="grid-column: 1 / -1">
-            <h3>Controle do Servo Motor</h3>
-            <p>
-              O coração do SnackTime é um servo motor controlado por Arduino,
-              responsável por liberar a ração.
-            </p>
-            <br />
-            <h4>Código Fonte</h4>
-            <pre
-              style="
-                background: var(--code-bg);
-                padding: 15px;
-                border-radius: 4px;
-                overflow-x: auto;
-                margin-top: 10px;
-              "
-            >
+          <div class="card-grid">
+            <div class="card" style="grid-column: 1 / -1">
+              <h3>Controle do Servo Motor</h3>
+              <p>
+                O coração do SnackTime é um servo motor controlado por Arduino,
+                responsável por liberar a ração.
+              </p>
+              <br />
+              <h4>Código Fonte</h4>
+              <pre
+                style="
+                  background: var(--code-bg);
+                  padding: 15px;
+                  border-radius: 4px;
+                  overflow-x: auto;
+                  margin-top: 10px;
+                "
+              >
 <code>#include &lt;Servo.h&gt;
 Servo servo;  // cria objeto do servo
 int angulo;   // variável para armazenar o ângulo atual
@@ -95,47 +96,55 @@ void loop() {
     delay(20);
   }
 }</code></pre>
+            </div>
           </div>
+        </section>
+      </div>
 
-          <div class="card">
-            <h3>Biblioteca Servo.h</h3>
-            <p>
-              Utilizamos a biblioteca padrão <code>Servo.h</code> para facilitar
-              o controle do posicionamento angular do motor.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Funcionamento</h3>
-            <p>
-              O loop principal move o servo de 0 a 180 graus e vice-versa,
-              simulando o mecanismo de abertura e fechamento do dispensador.
-            </p>
-          </div>
-          <div class="card">
-            <h3>Repositório GitHub</h3>
-            <p style="margin-bottom: 0.5rem">
-              Acesse o código fonte completo do projeto e contribua:
-            </p>
-            <a
-              href="https://github.com/andre4383/SnackTimeWebSite"
-              target="_blank"
-              style="
-                color: var(--primary-color);
-                font-weight: bold;
-                text-decoration: none;
-                word-break: break-all;
-              "
-            >
-              https://github.com/andre4383/SnackTimeWebSite
-            </a>
-          </div>
+      <div class="white-bg">
+        <div class="container">
+          <section class="section">
+            <div class="card-grid">
+              <div class="card">
+                <h3>Biblioteca Servo.h</h3>
+                <p>
+                  Utilizamos a biblioteca padrão <code>Servo.h</code> para
+                  facilitar o controle do posicionamento angular do motor.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Funcionamento</h3>
+                <p>
+                  O loop principal move o servo de 0 a 180 graus e vice-versa,
+                  simulando o mecanismo de abertura e fechamento do dispensador.
+                </p>
+              </div>
+              <div class="card">
+                <h3>Repositório GitHub</h3>
+                <p style="margin-bottom: 0.5rem">
+                  Acesse o código fonte completo do projeto e contribua:
+                </p>
+                <a
+                  href="https://github.com/andre4383/SnackTimeWebSite"
+                  target="_blank"
+                  style="
+                    color: var(--primary-color);
+                    font-weight: bold;
+                    text-decoration: none;
+                    word-break: break-all;
+                  "
+                >
+                  https://github.com/andre4383/SnackTimeWebSite
+                </a>
+              </div>
+            </div>
+          </section>
         </div>
-      </section>
+        <footer class="site-footer">
+          <p>&copy; 2025 SnackTime Project.</p>
+        </footer>
+      </div>
     </main>
-
-    <footer class="site-footer">
-      <p>&copy; 2025 SnackTime Project.</p>
-    </footer>
 
     <script src="js/script.js"></script>
   </body>
