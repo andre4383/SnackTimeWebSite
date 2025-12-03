@@ -75,27 +75,38 @@
                   margin-top: 10px;
                 "
               >
-<code>#include &lt;Servo.h&gt;
-Servo servo;  // cria objeto do servo
-int angulo;   // variável para armazenar o ângulo atual
+<code>#include <Servo.h>
+
+Servo servo;
+
+void moveServo(int inicio, int fim, int passo, int tempo) {
+  for (int angulo = inicio; angulo != fim + passo; angulo += passo) {
+    servo.write(angulo);
+    delay(tempo);
+  }
+}
 
 void setup() {
-  servo.attach(9);  // conecta o servo ao pino digital 9
+  servo.attach(9);
 }
 
 void loop() {
-  // Vai de 0 até 180 graus
-  for (angulo = 0; angulo <= 180; angulo++) {
-    servo.write(angulo);
-    delay(20); // controla a velocidade (20 ms = suave)
-  }
+  // Move de 0 para 90 (Início, Fim, Passo, Delay)
+  // Passo positivo (+) para ir para frente
+  moveServo(0, 90, 1, 20); 
 
-  // Volta de 180 até 0 graus
-  for (angulo = 180; angulo >= 0; angulo--) {
-    servo.write(angulo);
-    delay(20);
-  }
-}</code></pre>
+  // Delay entre uma abertura e outra para fins de demonstração
+  // Seria o tempo necessário para calcular a vazão e a
+  // quantidade de ração que vai cair
+  delay(1000);
+
+  // Move de 90 para 0 (Início, Fim, Passo, Delay)
+  // Passo negativo (-) para voltar
+  moveServo(90, 0, -1, 20); 
+
+  delay(10000);
+}
+</code></pre>
             </div>
           </div>
         </section>
