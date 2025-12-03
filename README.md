@@ -6,7 +6,6 @@ O **SnackTime** é um projeto de alimentador automatizado desenvolvido com Ardui
 
 ## ✨ Funcionalidades
 
-- **Design Amigável**: Interface "Playful" pensada para o universo pet.
 - **Modo Noturno**: Tema escuro automático e manual para conforto visual.
 - **Documentação Técnica**: Explicação detalhada do código Arduino utilizado.
 - **Responsivo**: Funciona bem em computadores e celulares.
